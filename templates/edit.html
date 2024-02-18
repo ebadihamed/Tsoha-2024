@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit blog</title>
+</head>
+<body>
+    <h2>Edit your blog:</h2>
+    <form action="/edit_save" method="POST">
+        <input type="text" name="content" value="{{ content }}" />
+        <input type="hidden" name="id" value="{{ id }}"/>
+        <input type="submit" value="save" /> 
+    </form>
+    <form action="/edit_cancel" method="POST">
+        <input type="submit" value="cancel" />
+    </form>
+</body>
+</html>

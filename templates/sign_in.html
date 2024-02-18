@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in</title>
+</head>
+<body>
+    <h1>Sign in:</h1>
+    <form action="/log_in" method="POST">
+        <label for="uname">username:</label><br>
+        <input type="text" id="uname" name="uname"/><br>
+        <label for="password">password:</label><br>
+        <input type="text" id="password" name="password"/><br>
+        <input type="submit" value="send"/>
+    </form>
+    <br>
+    <form action="/edit_cancel" method="POST">
+        <input type="submit" value="cancel"/>
+    </form>
+    <h4>If you don't have an account, please sign up <a href="/sign_up">here</a></h4>
+</body>
+</html>
