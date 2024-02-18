@@ -20,17 +20,17 @@ Sovellus on tällä hetkellä 60% valmis. Aion lisätä siihen vielä paljon uus
 Käynnistysohjeet:
 
 Luo kansioon .env tiedosto ja määritä sen sisältö seuraavanlaiseksi:
-   DATABASE_URL=<tietokannan-paikallinen-osoite>
-   SECRET_KEY=<salainen-avain>
+- DATABASE_URL=(tietokannan-paikallinen-osoite)
+- SECRET_KEY=(salainen-avain)
 
 Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla
-   $ python3 -m venv venv
-   $ source venv/bin/activate
-   $ pip install -r ./requirements.txt
+- $ python3 -m venv venv
+- $ source venv/bin/activate
+-  $ pip install -r ./requirements.txt
 
 Määritä vielä tietokannan skeema komennolla
-   $ psql < schema.sql
+- $ psql < schema.sql
 
 Nyt voit käynnistää sovelluksen komennolla
-   $ flask run
+- $ flask run
 
