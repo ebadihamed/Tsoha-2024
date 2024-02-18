@@ -13,5 +13,24 @@ Sovelluksen ominaisuuksia:
     - Blogin alapuolella näkyy julkaisuaika.
  - Ylläpitäjä voi poistaa blogeja ja piilottaa niitä muiden käyttäjien näkyvistä.
 
-Välipalautus 2:
-- Sovellus on vielä keskeneräinen, ja ajattelin, ettei se ole vielä sellaisessa vaiheessa, että voisin jakaa sen GitHubissa. Olen käyttänyt paljon aikaa materiaalin lukemiseen ja harjoitteluun, joten projektin kehittämiselle ei ole jäänyt tarpeeksi aikaa. Nyt aion kuitenkin keskittyä täysin projektiin ja toivon saavani sen valmiiksi ajoissa. Toivon, että tämä ei vaikuta kurssin arvosanaan.
+Välipalautus 3:
+
+Sovellus on tällä hetkellä 60% valmis. Aion lisätä siihen vielä paljon uusia toimintoja ja tehdä muokkauksia. Tässä on vasta perusversio, koska aikaa ei ollut tarpeeksi. Toivottavasti saan sen valmiiksi ajoissa. Aluksi tietokannassa ei ole mitään blogeja ja siihen kannattaa lisätä pari ja sitten testailla toimintoja.
+
+Käynnistysohjeet:
+
+Luo kansioon .env tiedosto ja määritä sen sisältö seuraavanlaiseksi:
+   DATABASE_URL=<tietokannan-paikallinen-osoite>
+   SECRET_KEY=<salainen-avain>
+
+Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla
+   $ python3 -m venv venv
+   $ source venv/bin/activate
+   $ pip install -r ./requirements.txt
+
+Määritä vielä tietokannan skeema komennolla
+   $ psql < schema.sql
+
+Nyt voit käynnistää sovelluksen komennolla
+   $ flask run
+
