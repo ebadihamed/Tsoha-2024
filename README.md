@@ -12,3 +12,6 @@ Sovelluksen ominaisuuksia:
     - Blogin tekijällä on oikeus poistaa ja muokata blogiaan.
     - Blogin alapuolella näkyy julkaisuaika.
  - Ylläpitäjä voi poistaa blogeja ja piilottaa niitä muiden käyttäjien näkyvistä.
+
+Välipalautus 2:
+- Sovellus on vielä keskeneräinen, ja ajattelin, ettei se ole vielä sellaisessa vaiheessa, että voisin jakaa sen GitHubissa. Olen käyttänyt paljon aikaa materiaalin lukemiseen ja harjoitteluun, joten projektin kehittämiselle ei ole jäänyt tarpeeksi aikaa. Nyt aion kuitenkin keskittyä täysin projektiin ja toivon saavani sen valmiiksi ajoissa. Toivon, että tämä ei vaikuta kurssin arvosanaan.
