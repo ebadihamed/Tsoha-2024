@@ -31,7 +31,7 @@
     {% for blog in blogs %}
     <div class="blog-box">
         <p>{{ blog.content }}</p>
-        <p>Created Time: {{ blog.created_at }}</p>
+        <p>Created Time: {{ blog.created_at.strftime("%Y-%m-%d") }}</p>
         <p>Likes: {{ blog.likes }}</p>
         <form action="/like" method="POST">
             <input type="submit" value="like"/> 
@@ -50,7 +50,7 @@
     <!-- Show this if not logged in-->
     {% else %}
     <div class="loggin-container">
-        <a href="/sign_in">Sign in</a>
+        <a href="/login">Sign in</a>
     </div>
     <br>
     <hr>
