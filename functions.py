@@ -53,3 +53,11 @@ def remove_blog(blog_id):
     sql = text("DELETE FROM blogs WHERE id = :blog_id")
     db.session.execute(sql, {"blog_id": blog_id})
     db.session.commit()
+
+def check_like(user_id, blog_id):
+    sql = text("SELECT COUNT(id) FROM blog_likes WHERE user_id = :user_id AND blog_id = :blog_id")
+    result = db.session.execute(sql, {"blog_id": blog_id, "user_id": user_id})
+    answer = result.fetchone()
+    if answer[0] == 0:
+        return True
+    return False

@@ -127,12 +127,15 @@ def new_blog():
 def like():
     # Get the blog_id from POST and user_id from database
     blog_id = request.form["blog_id"]
+    user_id = request.form["user_id"]
     username = session["username"]
     result = functions.get_users(username)
     user_id = result[0]
 
-    # Insert the like to the database and redirect to main page
-    functions.like(user_id, blog_id)
+    # Checks if the user has liked the blog before
+    if functions.check_like(user_id, blog_id):
+        # Insert the like to the database and redirect to main page
+        functions.like(user_id, blog_id)
 
     return redirect("/")
 
@@ -165,7 +168,7 @@ def edit_save():
 def remove():
     if session["csrf_token"] != request.form["csrf_token"]:
         abort(403)
-        
+
     blog_id = request.form["blog_id"]
     functions.remove_blog(blog_id)
     return redirect("/")
