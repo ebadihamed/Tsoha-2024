@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>Create a new account:</h1>
+    <form action="/register" method="POST" onsubmit="return check(this)">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"/><br>
+        <label for="uname">username:</label><br>
+        <input type="text" id="uname" name="uname"/><br>
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password"/><br>
+        <label for="password_1">password again:</label><br>
+        <input type="password" id="password_1" name="password_1"/><br>
+        <input type="submit" value="Register"/>
+    </form>
+    <br>
+    <script>
+        function check(form) {
+            if (form.uname.value.length == 0 || form.fname.value.length == 0 ||
+            form.password.value.length == 0 || form.password_1.value.length == 0) {
+                alert("Fill all the form before submiting")
+                return false
+            }
+            if (form.password_1.value != form.password.value) {
+                alert("Passwords does not match");
+                return false
+            }
+            if (form.fname.value.length < 3 || form.uname.value.length < 3){
+                alert("name or username is too short");
+                return false
+            }
+            if (form.fname.value.length > 30 || form.uname.value.length > 30){
+                alert("name or username is too long");
+                return false
+            }
+            if (form.password.value.length < 3 || form.password.value.length > 50){
+                alert("password is too short or long")
+                return false
+            }
+            return true
+        }
+    </script>
+    <form action="/cancel" method="POST">
+        <input type="submit" value="cancel"/>
+    </form>
+</body>
+</html>

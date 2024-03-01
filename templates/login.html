@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Sign in:</h1>
+    <form action="/login" method="POST" onsubmit="return check(this)">
+        <label for="uname">username:</label><br>
+        <input type="text" id="uname" name="uname"/><br>
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password"/><br>
+        <input type="submit" value="send"/>
+    </form>
+    <br>
+    <script>
+        function check(form){
+            if (form.uname.value.length == 0 || form.password.value.length == 0) {
+                alert("Fill all the form before submiting")
+                return false
+            }
+            if (form.uname.value.length < 3){
+                alert("username is too short");
+                return false
+            }
+            if (form.uname.value.length > 30){
+                alert("username is too long");
+                return false
+            }
+            if (form.password.value.length < 5 || form.password.value.length > 50){
+                alert("password is too short or long")
+                return false
+            }
+            return true
+        }
+    </script>
+    <form action="/cancel" method="POST">
+        <input type="submit" value="cancel"/>
+    </form>
+    <h4>If you don't have an account, please sign up <a href="/register">here</a></h4>
+</body>
+</html>
