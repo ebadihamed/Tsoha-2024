@@ -1,5 +1,14 @@
-Virhe: {{ message }}
-<br>
-<form action="/cancel" method="POST">
-    <input type="submit" value="Back">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p class="error-message">Error: {{ message }}</p>
+    <form action="/cancel" method="POST">
+        <input type="submit" class=" cancel-button" value="Back">
+    </form>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body {
+    margin: auto;
+    max-width: 50em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: gainsboro;
+}
+
+.header {
+    background-color: bisque;
+    font-weight: bold;
+    padding: 2em 1em;
+    font-size: 2em;
+}
+
+.blog-box {
+    border: 2px solid bisque;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+}
+
+.logging-container li {
+    display: inline-block;
+    padding: .5em;
+    background: white;
+    border-radius: .5em;
+    margin: .2em;
+    color: #000;
+}
+
+.logging-container li a {
+    text-decoration: none;
+}
+
+.logging-container li:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.logging-container ul {
+    padding: 0;
+    margin: .5em;
+    text-align: center;
+}
+
+.content {
+    border: 1px solid black;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.info {
+    padding: 0;
+    margin: 0;
+}
+.info li {
+    display: inline-block;
+    padding: .5em;
+}
+
+.button {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.button li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+.button input[type="submit"] {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+  
+.button input[type="submit"]:hover {
+    background-color: #333;
+    color: #fff;
+}
+  
+.button input[type="submit"]:active {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-container input[type="submit"].cancel {
+    background-color: #dc3545;
+}
+
+.form-container input[type="submit"].cancel:hover {
+    background-color: #c82333;
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 18px;
+    margin-bottom: 10px;
+}

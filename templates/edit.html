@@ -2,17 +2,21 @@
 <html>
 <head>
     <title>Edit blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <h2>Edit your blog:</h2>
-    <form action="/edit_save" method="POST">
-        <textarea name="content" rows="10" cols="50">{{ content }}</textarea>
-        <input type="hidden" name="id" value="{{ id }}"/>
-        <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
-        <input type="submit" value="save" /> 
-    </form>
+    <div class="form-container">
+        <form action="/edit_save" method="POST">
+            <textarea name="content" rows="10" cols="50">{{ content }}</textarea>
+            <input type="hidden" name="id" value="{{ id }}"/>
+            <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+            <input type="submit" value="save" /> 
+        </form>
+    </div>
     <form action="/cancel" method="POST">
-        <input type="submit" value="cancel" />
+        <input type="submit" class="cancel-button" value="cancel" />
     </form>
 </body>
 </html>
