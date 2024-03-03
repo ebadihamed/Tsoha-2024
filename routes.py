@@ -90,7 +90,7 @@ def register():
                 functions.new_user(username, firstname, password_hash)
             else:
                 return render_template("error.html", message="Passwords does not match")
-        return redirect("/")
+        return render_template("login.html")
 
 @app.route("/log_out")
 def log_out():

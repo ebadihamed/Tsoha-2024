@@ -6,7 +6,6 @@ Sovelluksen ominaisuuksia:
  - Käyttäjä voi luoda uuden tunnuksen, jonka jälkeen pystyy kirjautua sisään sekä ulos.
  - Etusivulla näytetään julkaistut blogit järjestyksessä niin, että uusin blogi on ensimmäisenä.
  - Kaikki voivat nähdä blogit, vaikka eivät olisi kirjautuneet sisään. Kuitenkin blogin luominen ja tykkääminen edellyttää sisäänkirjautumista.
- - Käyttäjä voi etsiä kaikki blogit, joiden osana on annettu sana tai kirjoittajan nimellä.
  - Blogien ominaisuudet:
     - Käyttäjät voivat antaa tykkäyksiä blogeille, ja tykkäysten määrä näkyy blogin alapuolella.
     - Blogin tekijällä on oikeus poistaa ja muokata blogiaan.

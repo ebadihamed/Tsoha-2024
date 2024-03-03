@@ -33,3 +33,8 @@ CREATE TABLE blog_likes(
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+INSERT INTO users (username, name, created_at) VALUES ("hamedebadi", "hamed", NOW());
+INSERT INTO credentials (user_id, password_hash, created_at) VALUES (1, 12345, NOW());
+INSERT INTO blogs (content, user_id, created_at) VALUES ("This is the first blog created by me to and you can create your own by clicking on creating button!", 1, NOW());
+INSERT INTO blogs (content, user_id, created_at) VALUES ("It's crazy that we have to study math for computer science, I mean who even knew that fact, right?", 1, NOW());
+INSERT INTO blogs (content, user_id, created_at) VALUES ("I wish every course on computer science program was this interesting and easy!!!", 1, NOW());
